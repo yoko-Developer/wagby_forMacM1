@@ -45,3 +45,36 @@ openjdk@17のパスを環境変数に設定
 echo 'export JAVA_HOME=$(/usr/libexec/java_home -v 17)' >> ~/.zshrc
 source ~/.zshrc
 ```
+
+再度openjdk@17をインストール
+```
+brew install openjdk@17
+```
+
+バージョン確認
+```
+java --version
+```
+
+現在のJavaバージョン:OpenJDK 21
+![alt text](D1EB2180-021F-4627-839F-1BE2AE38AB37_4_5005_c.jpeg)
+
+### Java 17 を優先的に使用する設定
+
+現在のインストール確認
+
+```
+/usr/libexec/java_home -V
+```
+![alt text](58E912FD-5B0F-4454-9DB8-8896B500C98C_1_201_a.jpeg)
+
+Java17のインストールパスを確認
+```
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+export PATH=$JAVA_HOME/bin:$PATH
+```
+```
+java -version
+```
+
+![alt text](F39B31C5-95AE-4B58-B236-2EBE1CECD687_1_201_a.jpeg)
